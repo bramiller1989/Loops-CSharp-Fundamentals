@@ -86,7 +86,13 @@ namespace Loops
 
         static void Main(string[] args)
         {
-            
+            Program program = new Program();
+
+            program.Exercise1();
+            program.Exercise2();
+            program.Exercise3();
+            program.Exercise4();
+            program.Exercise5();
         }
     }
 }
