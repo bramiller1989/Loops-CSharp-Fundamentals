@@ -21,7 +21,7 @@ namespace Loops
             var sum = 0;
             while (true)
             {
-                Console.WriteLine("Enter a number (or 'ok' to exit): ");
+                Console.Write("Enter a number (or 'ok' to exit): ");
                 var input = Console.ReadLine();
 
                 if (input.ToLower() == "ok")
@@ -31,6 +31,38 @@ namespace Loops
             }
 
             Console.WriteLine("Sum of all numbers is: " + sum);
+        }
+
+        public void Exercise3()
+        {
+            Console.Write("Enter a number: ");
+            var number = Convert.ToInt32(Console.ReadLine());
+
+            var factorial = 1;
+            for (var i = 1; i <= number; i++)
+                factorial += i;
+
+            Console.WriteLine("{0}! = {1}", number, factorial);
+        }
+
+        public void Exercise4()
+        {
+            var number = new Random().Next(1, 10);
+
+            Console.WriteLine("Secret is " + number);
+            for (var i = 0; i < 4; i++)
+            {
+                Console.Write("Guess the secret number: ");
+                var guess = Convert.ToInt32(Console.ReadLine());
+
+                if (guess == number)
+                {
+                    Console.WriteLine("You won!");
+                    return;
+                }
+
+                Console.WriteLine("You lost!");
+            }
         }
 
         static void Main(string[] args)
